@@ -1,0 +1,81 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pdb
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+*.log
+*.pot
+*.mo
+*.pydevproject
+.env
+.venv/
+venv/
+ENV/
+env/
+instance/
+.mypy_cache/
+.pytest_cache/
+.coverage
+coverage.xml
+*.cover
+*.pyc
+.cache/
+.tox/
+pip-log.txt
+pip-delete-this-directory.txt
+htmlcov/
+*.sqlite3
+
+# Flask
+*.db
+*.sqlite
+*.bak
+*.swp
+*.swo
+*.pid
+instance/
+*.env
+.env.*
+config.py
+*.pem
+
+# VSCode
+.vscode/
+
+# Vue.js
+node_modules/
+dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.local
+*.sublime*
+.DS_Store
+*.bak
+*.tmp
+*.swp
+*.swo
+*.idea
+.env.local
+.env.*.local
+.eslintcache
+
+# OS/System files
+Thumbs.db
+Desktop.ini
+
+# Optional: Ignore frontend build in Flask static folder
+/frontend/dist/
+
+# Optional: Ignore compiled frontend copied to Flask static folder
+/app/static/
