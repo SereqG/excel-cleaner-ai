@@ -1,11 +1,17 @@
-import pandas as pd
-import json
+from process_manager.file_handling import File
+from process_manager.action_handling import Action
 
-path = '../files/input/messy_test_file.xlsx'
+def app():
+  file = File()
+  while True:
+    file.load_file()
+    print(file.is_file_loaded)
+    if file.is_file_loaded == True:
+      action = Action(file.df)
+      action.select_possible_actions
 
-df = pd.read_excel(path, sheet_name=None)
 
-csv_string = df['Sheet1'].to_csv(index=False, header=True)
 
-print(csv_string.re)
+if __name__ == "__main__":
+  app()
 
