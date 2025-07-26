@@ -33,12 +33,40 @@
       </div>
     </div>
   </div>
+  <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+    <QuickAction
+      v-for="(action, index) in quickActions"
+      :key="index"
+      :title="action.title"
+      :description="action.description"
+      :action="action.action"
+    />
+  </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import QuickAction from './QuickAction.vue'
 
 const selectedFile = ref<File | null>(null)
+
+const quickActions = [
+  {
+    title: 'Format Dates',
+    description: 'Automatically format dates in your spreadsheet',
+    action: () => console.log('Action 1 clicked'),
+  },
+  {
+    title: 'Fill Empty Cells',
+    description: 'Quickly fill empty cells with default values',
+    action: () => console.log('Action 2 clicked'),
+  },
+  {
+    title: 'Custom Action',
+    description: 'Use AI to modify your spreadsheet',
+    action: () => console.log('Action 3 clicked'),
+  },
+]
 
 function handleFileChange(event: Event) {
   const target = event.target as HTMLInputElement
